@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # third party 
     "rest_framework",
     "rest_framework.authtoken",
+    "dj_rest_auth",
     # local
     "users.apps.UsersConfig",
 ]
