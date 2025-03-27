@@ -7,6 +7,9 @@ class SubjectListAPIView(generics.ListCreateAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
 
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
 class SubjectDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
