@@ -22,5 +22,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/goals/", include("goals.urls")),
     path("api/auth/", include("dj_rest_auth.urls")),
-    path("api/auth/signup", include("dj_rest_auth.registration.urls"))
+    path("api/auth/signup", include("dj_rest_auth.registration.urls")),
+    path("api/subjects/", include("subjects.urls")),
 ]
